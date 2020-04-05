@@ -1,12 +1,18 @@
 import React from "react";
+import { Provider } from "react-redux";
 
+import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
 
 import Routes from "./routes";
 
 function App() {
-  return <Routes />;
+  return (
+    <Provider store={store}>
+      <Routes />
+    </Provider>
+  );
 }
 
 export default App;
